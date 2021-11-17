@@ -13,7 +13,7 @@
 }
 
 h1 {
-	color: orange;
+	color: black;
 }
 
 #logo {
@@ -45,7 +45,7 @@ body {
 #page-content {
   flex: 1 0 auto;
   background: lightgrey;
-  background: linear-gradient(to right, lightgrey, black);
+  background: linear-gradient(to right, lightgrey, DodgerBlue);
 }
 
 /* Other Classes for Page Styling */
