@@ -17,7 +17,6 @@
           <% if logged_in? %>
             <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
           <% end %>
-          <div class="dropdown-divider"></div>
           <%= link_to "View articles", articles_path, class: "dropdown-item" %>
         </div>
       </li>
@@ -28,9 +27,9 @@
             Profile [<%= current_user.username %>]
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to "View your profile", user_path(current_user), class: "dropdown-item" %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item" %>
+            <%= link_to "View your profile", user_path(current_user), class: "dropdown-item text-success" %>
+            <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item text-info" %>
+            <%= link_to "Delete your profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "This action is irreversible and will permanently delete your profile and all associated articles. Are you sure?"} %>
           </div>
         </li>
    
